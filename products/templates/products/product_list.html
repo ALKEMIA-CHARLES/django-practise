@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+{%block content%}
+
+<h1>fuck you</h1>
+
+{%for product in products%}
+<p>{{product.title}}</p>
+<p>{{product.description}}</p>
+<p>{{product.price}}</p>
+<a href="{% url 'delete_product' item.pk% }" class="btn-btn-danger btn-sm" role="button" >Click me</a>
+{%endfor%}
+{%endblock%}
